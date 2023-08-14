@@ -1,22 +1,70 @@
 /* style for using flashcards page */
 #title {
 	text-align: center;
+	margin-top: 2%;
 }
 
 .slide {
-	width: 50%;
+	width: 65%;
 	margin: auto;
 	text-align: center;
+	margin-top: 3%;
 }
 
 .carousel-inner {
 	background-color: rgba(104, 112, 117, 0.705);
 	color: white;
-	min-height: 50vh;
+	min-height: 60vh;
 	display: flex;
 	align-items: center;
 }
 
-.carousel-item {
-	border: solid 1px green;
+.carousel-inner .carousel-item {
+	width: 70%;
+	margin: auto;
+}
+
+.term {
+	white-space: normal;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+/* ------------Navbar Styling-------------- */
+
+#navbarDiv {
+	display: flex;
+	justify-content: space-between;
+}
+
+#navbarDiv > img {
+	margin-left: 2rem;
+	width: 15%;
+	height: auto;
+}
+
+nav {
+	display: flex;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	background: linear-gradient(#6b6b6b, black);
+}
+
+.navContentDiv {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+.navContentDiv > a {
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	color: #51aaad;
+	text-decoration: none;
+	font-size: 1.25rem;
+}
+
+.navContentDiv > span {
+	color: #f08c00;
 }
