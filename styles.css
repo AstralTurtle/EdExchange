@@ -1,0 +1,23 @@
+/* style for using flashcards page */
+#title {
+	text-align: center;
+}
+
+.slide {
+	width: 50%;
+	margin: auto;
+	text-align: center;
+}
+
+.carousel-inner {
+	background-color: rgba(104, 112, 117, 0.705);
+	color: white;
+	min-height: 50vh;
+	display: flex;
+	align-items: center;
+}
+
+.carousel-item {
+	border: solid 1px green;
+	width: 50%;
+}
