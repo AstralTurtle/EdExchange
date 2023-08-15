@@ -1,198 +1,51 @@
-<div class="textdiv">
-				<div id="textbookimg">
-					<img id="sampleimage" src="assets/Sample.jpg" alt="" />
-				</div>
-				<div id="nameofbook">
-					<p>Text book name</p>
-				</div>
-				<div id="edition">
-					<p>Edition</p>
-				</div>
-				<div id="price">
-					<p>Price</p>
-				</div>
-				<div id="sellcontact">
-					<div id="seller">
-						<p>Seller</p>
-					</div>
-					<div id="contact">
-						<p>Contact</p>
-					</div>
-				</div>
-			</div>
-			<div class="textdiv">
-				<div id="textbookimg">
-					<img id="sampleimage" src="assets/Sample.jpg" alt="" />
-				</div>
-				<div id="nameofbook">
-					<p>Text book name</p>
-				</div>
-				<div id="edition">
-					<p>Edition</p>
-				</div>
-				<div id="price">
-					<p>Price</p>
-				</div>
-				<div id="sellcontact">
-					<div id="seller">
-						<p>Seller</p>
-					</div>
-					<div id="contact">
-						<p>Contact</p>
-					</div>
-				</div>
-			</div>
-			<div class="textdiv">
-				<div id="textbookimg">
-					<img id="sampleimage" src="assets/Sample.jpg" alt="" />
-				</div>
-				<div id="nameofbook">
-					<p>Text book name</p>
-				</div>
-				<div id="edition">
-					<p>Edition</p>
-				</div>
-				<div id="price">
-					<p>Price</p>
-				</div>
-				<div id="sellcontact">
-					<div id="seller">
-						<p>Seller</p>
-					</div>
-					<div id="contact">
-						<p>Contact</p>
-					</div>
-				</div>
-			</div>
-			<div class="textdiv">
-				<div id="textbookimg">
-					<img id="sampleimage" src="assets/Sample.jpg" alt="" />
-				</div>
-				<div id="nameofbook">
-					<p>Text book name</p>
-				</div>
-				<div id="edition">
-					<p>Edition</p>
-				</div>
-				<div id="price">
-					<p>Price</p>
-				</div>
-				<div id="sellcontact">
-					<div id="seller">
-						<p>Seller</p>
-					</div>
-					<div id="contact">
-						<p>Contact</p>
-					</div>
-				</div>
-			</div>
-			<div class="textdiv">
-				<div id="textbookimg">
-					<img id="sampleimage" src="assets/Sample.jpg" alt="" />
-				</div>
-				<div id="nameofbook">
-					<p>Text book name</p>
-				</div>
-				<div id="edition">
-					<p>Edition</p>
-				</div>
-				<div id="price">
-					<p>Price</p>
-				</div>
-				<div id="sellcontact">
-					<div id="seller">
-						<p>Seller</p>
-					</div>
-					<div id="contact">
-						<p>Contact</p>
-					</div>
-				</div>
-			</div>
-			<div class="textdiv">
-				<div id="textbookimg">
-					<img id="sampleimage" src="assets/Sample.jpg" alt="" />
-				</div>
-				<div id="nameofbook">
-					<p>Text book name</p>
-				</div>
-				<div id="edition">
-					<p>Edition</p>
-				</div>
-				<div id="price">
-					<p>Price</p>
-				</div>
-				<div id="sellcontact">
-					<div id="seller">
-						<p>Seller</p>
-					</div>
-					<div id="contact">
-						<p>Contact</p>
-					</div>
-				</div>
-			</div>
-			<div class="textdiv">
-				<div id="textbookimg">
-					<img id="sampleimage" src="assets/Sample.jpg" alt="" />
-				</div>
-				<div id="nameofbook">
-					<p>Text book name</p>
-				</div>
-				<div id="edition">
-					<p>Edition</p>
-				</div>
-				<div id="price">
-					<p>Price</p>
-				</div>
-				<div id="sellcontact">
-					<div id="seller">
-						<p>Seller</p>
-					</div>
-					<div id="contact">
-						<p>Contact</p>
-					</div>
-				</div>
-			</div>
-			<div class="textdiv">
-				<div id="textbookimg">
-					<img id="sampleimage" src="assets/Sample.jpg" alt="" />
-				</div>
-				<div id="nameofbook">
-					<p>Text book name</p>
-				</div>
-				<div id="edition">
-					<p>Edition</p>
-				</div>
-				<div id="price">
-					<p>Price</p>
-				</div>
-				<div id="sellcontact">
-					<div id="seller">
-						<p>Seller</p>
-					</div>
-					<div id="contact">
-						<p>Contact</p>
-					</div>
-				</div>
-			</div>
-			<div class="textdiv">
-				<div id="textbookimg">
-					<img id="sampleimage" src="assets/Sample.jpg" alt="" />
-				</div>
-				<div id="nameofbook">
-					<p>Text book name</p>
-				</div>
-				<div id="edition">
-					<p>Edition</p>
-				</div>
-				<div id="price">
-					<p>Price</p>
-				</div>
-				<div id="sellcontact">
-					<div id="seller">
-						<p>Seller</p>
-					</div>
-					<div id="contact">
-						<p>Contact</p>
-					</div>
-				</div>
-			</div>
+<script>
+			// FirebaseUI config
+			var uiConfig = {
+				signInOptions: [
+					// Add the sign-in options you want to offer your users
+					{
+						provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+						requireDisplayName: true,
+					},
+				],
+				// Add the terms of service and privacy policy URLs
+
+				tosUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+				signInFlow: "popup",
+
+				privacyPolicyUrl: function () {
+					window.location.assign("https://www.youtube.com/watch?v=xvFZjo5PgG0");
+				},
+				signInSuccessUrl: "index.html",
+			};
+
+			// Initialize FirebaseUI
+			var ui = new firebaseui.auth.AuthUI(firebase.auth());
+
+			let loginBtn = document.getElementById("loginbtn");
+			console.log(loginBtn);
+			// Add a click event listener to the login button
+			loginBtn.addEventListener("click", function () {
+				document.getElementById("firebaseui-auth-container").style.display =
+					"flex";
+
+				// Start the FirebaseUI login flow
+				ui.start("#firebaseui-auth-container", uiConfig);
+			});
+
+			// Add an auth state change listener
+			firebase.auth().onAuthStateChanged(function (user) {
+				console.log(user);
+				if (user) {
+					// User is logged in, hide the login button
+					loginBtn.style.display = "none";
+					document.getElementById("firebaseui-auth-container").style.display =
+						"none";
+					document.getElementById("loginstatus").innerHTML =
+						"Logged in as: " + user.displayName;
+				} else {
+					// User is not logged in, show the login button
+					loginBtn.style.display = "block";
+				}
+			});
+		</script>

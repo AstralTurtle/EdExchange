@@ -1,7 +1,18 @@
+/* style for viewFlashcards */
+
+#searchbar {
+	width: 1900px;
+	height: 50px;
+	background-color: #032140;
+	margin-top: -20px;
+	color: white;
+}
+
 /* style for using flashcards page */
 #title {
 	text-align: center;
 	margin-top: 2%;
+	color: white;
 }
 
 .slide {
@@ -12,11 +23,12 @@
 }
 
 .carousel-inner {
-	background-color: rgba(104, 112, 117, 0.705);
+	background-color: rgba(16, 47, 66, 0.993);
 	color: white;
 	min-height: 60vh;
 	display: flex;
 	align-items: center;
+	cursor: pointer;
 }
 
 .carousel-inner .carousel-item {
@@ -24,12 +36,19 @@
 	margin: auto;
 }
 
-.term {
+.carousel-item p {
 	white-space: normal;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 }
 
+.term {
+	display: block;
+}
+
+.description {
+	display: none;
+}
 /* ------------Navbar Styling-------------- */
 
 #navbarDiv {

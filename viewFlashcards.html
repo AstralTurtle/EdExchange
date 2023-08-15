@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>EdExchange | Study Flashcards</title>
+		<title>EdExchange | Flashcards</title>
 		<link rel="stylesheet" href="styles.css" />
 		<link rel="stylesheet" href="textbook.css" />
 		<link
@@ -21,8 +21,6 @@
 		<!-- Add the Firebase Firestore SDK -->
 		<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
 
-		<!-- Add the Firebase auth ui SDK -->
-		<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
 		<!-- database + class info script -->
 		<script src="database.js"></script>
 	</head>
@@ -53,40 +51,16 @@
 			</div>
 		</nav>
 
-		<h1 id="title">name of card group</h1>
-		<div id="carouselExample" class="carousel slide">
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<p class="term">slide 1</p>
-					<p class="description">description 1</p>
-				</div>
-				<div class="carousel-item">
-					<p class="term">slide 2</p>
-					<p class="description">description 2</p>
-				</div>
-				<div class="carousel-item">
-					<p class="term">slide 3</p>
-					<p class="description">description 3</p>
-				</div>
-			</div>
-			<button
-				class="carousel-control-prev"
-				type="button"
-				data-bs-target="#carouselExample"
-				data-bs-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Previous</span>
-			</button>
-			<button
-				class="carousel-control-next"
-				type="button"
-				data-bs-target="#carouselExample"
-				data-bs-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Next</span>
-			</button>
+		<div class="container-fluid">
+			<label for="userInput" id="search"></label>
+			<input
+				id="searchbar"
+				type="text"
+				name="userInput"
+				placeholder="Search"
+				maxlength="1900px" />
+			<br />
+			<a class="text-light" href="studyCards.html">study flashcards</a>
 		</div>
-
-		<script src="flashcards.js"></script>
 	</body>
 </html>

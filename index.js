@@ -1,29 +1,5 @@
-const firebaseConfig = {
-	apiKey: "AIzaSyBj56360i7OuhXgK7-PraYGZ9ppAnHJ82Q",
-
-	authDomain: "ascedexchange.firebaseapp.com",
-
-	projectId: "ascedexchange",
-
-	storageBucket: "ascedexchange.appspot.com",
-
-	messagingSenderId: "74402474063",
-
-	appId: "1:74402474063:web:1e579387666d52671da23a",
-};
-
-class textbookListing {
-	constructor(title, edition, price, seller, contact, img) {
-		this.title = title;
-		this.edition = edition;
-		this.price = price;
-		this.seller = seller;
-		this.contact = contact;
-		this.img = "";
-	}
-}
-
 function displayListing(listing) {
+	console.log("displayListing");
 	const listingContainer = document.createElement("div");
 	// add class to div
 	listingContainer.classList.add("textdiv");
@@ -98,14 +74,24 @@ function displayListing(listing) {
 	sellerDiv.appendChild(seller);
 	// append seller div to seller info div
 	sellerinfoDiv.appendChild(sellerDiv);
+
 	// create contact div
-	const contactDiv = document.createElement("div");
+	const contactDiv = document.createElement("button");
+
 	// add class to contact div
-	contactDiv.classList.add("contact");
+	contactDiv.classList.add("contact", "btn", "btn-light");
+
+	// make callback function for contact button
+	contactDiv.addEventListener("click", function () {
+		window.location.href = "mailto:" + listing.contact;
+	});
+
 	// create contact element
 	const contact = document.createElement("p");
+	//
+	contact.style.display.fontsize = "0.25rem";
 	// set innerHTML of contact element
-	contact.innerHTML = listing.contact;
+	contact.innerHTML = "Contact";
 	// append contact element to contact div
 	contactDiv.appendChild(contact);
 	// append contact div to seller info div
@@ -123,14 +109,44 @@ const testListing = new textbookListing(
 	"1st Edition",
 	"$100",
 	"Test Seller",
-	"vinne329",
-	"assets/imgs/logo-black.png"
+	"vinne329@gmail.com",
+	"assets/imgs/iconcolored.png"
 );
 
 // display test textbook listing
 displayListing(testListing);
 
 // test multiple textbook listings
-for (let i = 0; i < 1000; i++) {
-	displayListing(testListing);
-}
+// for (let i = 0; i < 1000; i++) {
+// 	displayListing(testListing);
+// }
+
+// create textbook listing array
+const textbookListings = [];
+// get database listings
+const listingsCollection = db.collection("listings");
+console.log(listingsCollection);
+const querySnapshot = listingsCollection
+	.get()
+	.then(function (querySnapshot) {
+		for (let i = 0; i < querySnapshot.docs.length; i++) {
+			const doc = querySnapshot.docs[i];
+			const listing = new textbookListing(
+				doc.data().title,
+				doc.data().edition,
+				doc.data().price,
+				doc.data().seller,
+				doc.data().email,
+				doc.data().img
+			);
+			textbookListings.push(listing);
+			console.log(listing);
+		}
+		for (let i = 0; i < textbookListings.length; i++) {
+			displayListing(textbookListings[i]);
+		}
+	})
+	.catch(function (error) {
+		console.error("Error getting documents: ", error);
+	});
+// display textbook listings

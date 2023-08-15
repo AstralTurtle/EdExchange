@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>EdExchange | Sell a Textbook</title>
 		<link rel="stylesheet" href="textbook.css" />
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
@@ -14,32 +14,113 @@
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
 			crossorigin="anonymous"></script>
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+
+		<!-- Add the Firebase Firestore SDK -->
+		<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+
+		<!-- Add the Firebase auth ui SDK -->
+		<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+
+		<!-- database + class info script -->
+		<script src="database.js"></script>
 	</head>
 	<body>
+		<nav class="container-fluid">
+			<div class="container-fluid text-emphasis-info" id="navbarDiv">
+				<div class="navContentDiv col-3" id="homeNavbar">
+					<img
+						class=""
+						src="assets/imgs/logo-color.png"
+						alt="logo"
+						id="navimg" />
+					<div id="logindiv" class="col-2 text-center">
+						<button class="btn btn-info" id="loginbtn">Login</button>
+						<h6 id="loginstatus"></h6>
+					</div>
+				</div>
+				<div class="navContentDiv" id="textbookNavbar">
+					<a class="" aria-current="page" href="index.html">Buy Textbooks</a>
+					<span>|</span>
+					<a class="" href="textbooks.html">Sell Textbooks</a>
+				</div>
+				<div class="navContentDiv" id="sectionNavbar">
+					<a class="" href="index.html">Textbooks </a>
+					<span>|</span>
+					<a class="" href="viewFlashcards.html"> Flashcards</a>
+				</div>
+			</div>
+		</nav>
 		<div id="alltextbooks">
 			<!-- we only need one text div -->
-			<div class="textdiv">
-				<div id="textbookimg">
-					<img id="sampleimage" src="assets/Sample.jpg" alt="" />
+			<div class="textdiv" id="selldiv">
+				<div class="textbookimgdiv">
+					<label for="img">Select image:</label>
+					<input type="file" id="imgInput" name="img" accept="image/*" />
 				</div>
 				<div id="nameofbook">
-					<p>Text book name</p>
+					<label for="userInput">Textbook Title:</label>
+					<input
+						class="textbox"
+						type="text"
+						id="titleInput"
+						name="userInput"
+						placeholder="Type here..."
+						maxlength="50"
+						size="30" />
 				</div>
 				<div id="edition">
-					<p>Edition</p>
+					<label for="userInput">Edition:</label>
+					<input
+						class="textbox"
+						type="text"
+						id="edInput"
+						name="userInput"
+						placeholder="Type here..."
+						maxlength="50"
+						size="30" />
 				</div>
 				<div id="price">
-					<p>Price</p>
+					<label for="userInput">Asking Price:</label>
+					<input
+						class="textbox"
+						type="text"
+						id="costInput"
+						name="userInput"
+						placeholder="Type here..."
+						maxlength="50"
+						size="30" />
 				</div>
 				<div id="sellcontact">
 					<div id="seller">
-						<p>Seller</p>
+						<label for="userInput">Your Name:</label>
+						<input
+							class="textbox"
+							type="text"
+							id="sellerInput"
+							name="userInput"
+							placeholder="Type here..."
+							maxlength="50"
+							size="30" />
 					</div>
 					<div id="contact">
-						<p>Contact</p>
+						<label for="userInput">Your email:</label>
+						<input
+							class="textbox"
+							type="text"
+							id="emailInput"
+							name="userInput"
+							placeholder="Type here..."
+							maxlength="50"
+							size="30" />
 					</div>
+					<button id="createListing" class="btn btn-info">
+						Create Listing
+					</button>
 				</div>
 			</div>
 		</div>
+		<script src="textbook.js"></script>
 	</body>
 </html>

@@ -1,3 +1,7 @@
+html {
+	height: 100%;
+}
+
 .textdiv {
 	border: 2px solid black;
 	width: 300px;
@@ -22,11 +26,16 @@
 	background-color: white;
 }
 
-.sampleimage {
-	width: 40%;
+.textbookimgdiv {
+	width: 45%;
 	display: block;
 	margin: auto;
 	margin-top: 10px;
+}
+
+.textbookimg {
+	width: 100%;
+	height: auto;
 }
 
 .edition {
@@ -69,7 +78,7 @@
 	margin-top: 5px;
 	font-weight: 600;
 	font-size: larger;
-	margin-right: 3px;
+	margin-right: -1px;
 	background-color: white;
 }
 
@@ -86,11 +95,31 @@
 	background-color: white;
 }
 
+.contact > p {
+	padding-bottom: 2rem;
+}
+
 #alltextbooks {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	opacity: 1;
+}
+
+body {
 	background: linear-gradient(0.5turn, #51aaad, #267e80);
+}
+/* sell Styling */
+
+#selldiv {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+}
+
+#createListing {
+	margin-left: 5rem;
+	padding: 0px;
 }
 
 /* ------------Navbar Styling-------------- */
@@ -100,10 +129,15 @@
 	justify-content: space-between;
 }
 
-#navbarDiv > img {
-	margin-left: 2rem;
-	width: 15%;
+#navimg {
+	margin-left: 3.5rem;
+	width: 16rem;
 	height: auto;
+	margin-right: 3rem;
+}
+
+#loginbtn {
+	width: auto;
 }
 
 nav {
@@ -130,4 +164,110 @@ nav {
 
 .navContentDiv > span {
 	color: #f08c00;
+}
+
+#textbookNavbarResponsive,
+#sectionNavbarResponsive {
+	display: none;
+}
+
+/* Auth Styling */
+
+#firebaseui-auth-container {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	max-width: 90%;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	padding: 20px;
+	z-index: 9999;
+	display: none;
+	background: linear-gradient(to right, #ffdc00, #ff577f);
+}
+
+.firebaseui-container {
+	background: linear-gradient(to right, #ffdc00, #ff577f);
+}
+
+.firebaseui-button {
+	margin: 0.5rem;
+}
+
+.firebaseui-container > h1 {
+	color: white;
+}
+
+.firebaseui-card-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+/* center items */
+
+/* Modal title */
+#firebaseui-auth-container h1 {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+/* Modal form */
+#firebaseui-auth-container form {
+	margin-bottom: 20px;
+}
+
+/* Modal form fields */
+#firebaseui-auth-container input[type="email"],
+#firebaseui-auth-container input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+/* Modal buttons */
+#firebaseui-auth-container button {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+/* Modal buttons on hover */
+#firebaseui-auth-container button:hover {
+	background-color: #0056b3;
+}
+
+/* Modal close button */
+#firebaseui-auth-container .modal-close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 20px;
+	color: #ccc;
+	cursor: pointer;
+}
+
+#logindiv {
+	width: 8rem;
+}
+
+#loginstatus {
+	width: fit-content;
+	margin: auto;
+	color: #f08c00;
+}
+
+.textbox {
+	background-color: #032140;
+	color: white;
 }
