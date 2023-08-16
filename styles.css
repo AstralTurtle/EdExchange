@@ -87,3 +87,49 @@ nav {
 .navContentDiv > span {
 	color: #f08c00;
 }
+
+/* Create Flashcard Styling */
+
+#newSet {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column wrap;
+}
+
+#cardContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+}
+
+.newCardBody {
+	background: linear-gradient(#ffdc00, #ff577f);
+}
+
+#flashcolor {
+	background: linear-gradient(#ffdc00, #ff577f);
+}
+
+#flashcardsdiv {
+	border: 2px solid white;
+	width: 1700px;
+	height: 600px;
+	border-radius: 10px;
+	display: flex;
+	float: right;
+	margin-right: 70px;
+	justify-content: space-around;
+}
+
+.btnContainer {
+	display: flex;
+	justify-content: space-evenly;
+}
+#newTerm {
+	margin-right: 5%;
+}
+#submitSet {
+	margin-left: 5%;
+}

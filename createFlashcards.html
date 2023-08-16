@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>EdExchange | Flashcards</title>
+		<title>EdExchange | Create Flashcards</title>
 		<link rel="stylesheet" href="styles.css" />
 		<link rel="stylesheet" href="textbook.css" />
 		<link
@@ -20,6 +20,9 @@
 
 		<!-- Add the Firebase Firestore SDK -->
 		<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+
+		<!-- Add the Firebase auth ui SDK -->
+		<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
 
 		<!-- database + class info script -->
 		<script src="database.js"></script>
@@ -48,32 +51,32 @@
 				</div>
 			</div>
 		</nav>
-
-		<div class="container-fluid">
-			<label for="userInput" id="search"></label>
-			<input
-				id="searchbar"
-				type="text"
-				name="userInput"
-				placeholder="Search"
-				maxlength="1900px" />
-			<br />
-			<a class="text-light" href="studyCards.html">study flashcards</a>
-		</div>
-		<div id="firebaseui-auth-container"></div>
-		<div id="allflashcards" class="container-fluid">
-			<div id="flashcardsdiv">
-				<div id="flashcolor" class="card w-25 bg-success" style="height: 200px">
-					<div class="card-body">
-						<h2 class="card-title">Card title</h2>
-						<p class="card-text">
-							With supporting text below as a natural lead-in to additional
-							content.
-						</p>
-						<a href="#" class="btn btn-primary">Study</a>
+		<main>
+			<form id="newSet" class="container" action="">
+				<div class="btnContainer">
+					<button class="btn btn-primary text-nowrap" id="newTerm">
+						Add A Card
+					</button>
+					<div class="border border-5 border-dark newCardBody text-center">
+						<label class="form-label text-primary fw-bold">Set Name</label>
+						<input class="form-control type="text" name="" id="setName" />
+					</div>
+					<button class="btn btn-success" id="submitSet">Finished?</button>
+				</div>
+				<div id="cardContainer" class="container-fluid">
+					<div class="newCard card col-4">
+						<div class="card-body border border-3 border-dark newCardBody">
+							<p class="text-center">1</p>
+							<label class="form-label text-primary fw-bold">Term:</label>
+							<input class="form-control" type="text" name="" id="t1" />
+							<label class="form-label text-primary fw-bold">Definition:</label>
+							<input class="form-control" type="text" name="" id="d1" />
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
+			</form>
+		</main>
+
+		<script src="createFlashcards.js"></script>
 	</body>
 </html>
