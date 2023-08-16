@@ -1,38 +1,20 @@
-let sampleData = {
-	"Unit 1": {
-		proton: "positively charged particle",
-		electron: "negatively charged particle",
-		solute: "thing being dissolved in a solution",
-	},
-	description: "Chemistry",
+console.log("flashcards.js loaded");
 
-	"Unit 2": {
-		"1 + 1": "2",
-		"2 * 3": "6",
-	},
-	description: "Math",
-};
-
-function updateSlides(cardTitle) {
-	document.querySelector("#title").innerHTML = cardTitle;
+function updateSlides(set) {
+	document.querySelector("#title").innerHTML = set.title;
 
 	let slideInner = document.querySelector(".carousel-inner");
 	slideInner.innerHTML = "";
-	let set = Object.entries(sampleData[cardTitle]);
-
-	for (let i = 0; i < set.length; i++) {
-		let key = set[i][0];
-		let value = set[i][1];
-
+	for (let i = 0; i < set.numCards; i++) {
 		// create new term
 		let newTerm = document.createElement("p");
 		newTerm.classList.add("term");
-		newTerm.innerHTML = key;
+		newTerm.innerHTML = set.termArr[i];
 
 		// create definition for that term
 		let newDef = document.createElement("p");
 		newDef.classList.add("description");
-		newDef.innerHTML = value;
+		newDef.innerHTML = set.defArr[i];
 
 		// create div to add to slides
 		let newDiv = document.createElement("div");
@@ -43,13 +25,13 @@ function updateSlides(cardTitle) {
 		// set first term to active by default
 		if (i == 0) {
 			newDiv.classList.add("active");
+			console.log(newDiv);
 		}
-
-		document.querySelector(".carousel-inner").appendChild(newDiv);
+		slideInner.appendChild(newDiv);
 	}
 }
 
-updateSlides("Unit 1");
+updateSlides(JSON.parse(localStorage.getItem("set")));
 
 const carousel = document.querySelector("#carouselExample");
 const cardBody = document.querySelector(".carousel-inner");
@@ -64,7 +46,7 @@ carousel.addEventListener("slid.bs.carousel", updateCardVariables); // runs when
 cardBody.addEventListener("click", flipCard);
 
 function updateCardVariables() {
-	activeCard = document.querySelector(".carousel-item.active");
+	activeCard = document.querySelector(".active");
 	term = activeCard.querySelector(".term");
 	description = activeCard.querySelector(".description");
 }
