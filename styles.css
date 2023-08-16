@@ -99,27 +99,29 @@ nav {
 
 #cardContainer {
 	display: flex;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
-	flex-flow: row wrap;
+	flex-wrap: wrap;
 }
 
 .newCardBody {
 	background: linear-gradient(#ffdc00, #ff577f);
 }
 
-#flashcolor {
-	background: linear-gradient(#ffdc00, #ff577f);
+.flashcolor {
+	background: linear-gradient(130deg, #ffdc00, #ff577f);
+	margin-top: 20px;
 }
 
 #flashcardsdiv {
-	border: 2px solid white;
+	/* border: 2px solid white;
 	width: 1700px;
 	height: 600px;
 	border-radius: 10px;
 	display: flex;
 	float: right;
 	margin-right: 70px;
+	margin-top: 20px; */
 	justify-content: space-around;
 }
 
@@ -132,4 +134,20 @@ nav {
 }
 #submitSet {
 	margin-left: 5%;
+}
+
+#flashcardsdiv {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.newcardcreated {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.card {
+	margin-right: 10px;
+	margin-left: 10px;
 }

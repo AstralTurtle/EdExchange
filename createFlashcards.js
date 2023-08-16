@@ -14,7 +14,7 @@ function createNewCard() {
 	termCount++;
 	// create new card div
 	const newCard = document.createElement("div");
-	newCard.classList.add("newCard", "card", "col-4");
+	newCard.classList.add("newCard", "card", "col");
 	// create new card body div
 	const newCardBody = document.createElement("div");
 	newCardBody.classList.add(
@@ -88,5 +88,5 @@ submit.addEventListener("click", function (event) {
 		.catch(function (error) {
 			console.error("Error adding document: ", error);
 		});
-	window.location.href = "viewFlashcards.html";
+	// window.location.href = "viewFlashcards.html";
 });

@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>EdExchange | Flashcards</title>
+		<link rel="icon" type="image/x-icon" href="assets/imgs/iconcolored.png" />
 		<link rel="stylesheet" href="styles.css" />
 		<link rel="stylesheet" href="textbook.css" />
 		<link
@@ -50,30 +51,32 @@
 		</nav>
 
 		<div class="container-fluid">
-			<label for="userInput" id="search"></label>
+			<label class="" for="userInput" id="search"></label>
 			<input
 				id="searchbar"
 				type="text"
 				name="userInput"
 				placeholder="Search"
 				maxlength="1900px" />
+			<button id="searchButton" class="btn btn-primary">Search</button>
 			<br />
-			<a class="text-light" href="studyCards.html">study flashcards</a>
+			<!-- <a class="text-light" href="studyCards.html">study flashcards</a> -->
 		</div>
 		<div id="firebaseui-auth-container"></div>
 		<div id="allflashcards" class="container-fluid">
-			<div id="flashcardsdiv">
-				<div id="flashcolor" class="card w-25 bg-success" style="height: 200px">
+			<div id="flashcardsdiv" class="container-fluid">
+				<div
+					id=""
+					class="flashcolor card col-2 bg-success"
+					style="height: 200px">
 					<div class="card-body">
-						<h2 class="card-title">Card title</h2>
-						<p class="card-text">
-							With supporting text below as a natural lead-in to additional
-							content.
-						</p>
+						<h2 class="card-title">Unit 1 Chemistry</h2>
+						<p class="card-text">(4 terms)</p>
 						<a href="#" class="btn btn-primary">Study</a>
 					</div>
 				</div>
 			</div>
 		</div>
+		<script src="viewFlashcards.js"></script>
 	</body>
 </html>

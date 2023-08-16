@@ -113,14 +113,6 @@ const testListing = new textbookListing(
 	"assets/imgs/iconcolored.png"
 );
 
-// display test textbook listing
-displayListing(testListing);
-
-// test multiple textbook listings
-// for (let i = 0; i < 1000; i++) {
-// 	displayListing(testListing);
-// }
-
 // create textbook listing array
 const textbookListings = [];
 // get database listings

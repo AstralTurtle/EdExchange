@@ -23,6 +23,15 @@ class textbookListing {
 	}
 }
 
+class set {
+	constructor(title, termArr, defArr) {
+		this.title = title;
+		this.numCards = termArr.length;
+		this.termArr = termArr;
+		this.defArr = defArr;
+	}
+}
+
 firebase.initializeApp(firebaseConfig);
 
 const db = firebase.firestore();
