@@ -89,7 +89,7 @@ searchButton.addEventListener("click", function (event) {
 	sets.forEach((set) => {
 		// console.log(set.title);
 
-		if (set.title.includes(searchInput)) {
+		if (set.title.toLowerCase().includes(searchInput.toLowerCase())) {
 			displaySet(set);
 			console.log("found set " + set.title);
 		}
