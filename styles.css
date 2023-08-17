@@ -101,7 +101,7 @@ nav {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-	flex-wrap: wrap;
+	flex-flow: row wrap;
 }
 
 .newCardBody {
@@ -138,7 +138,7 @@ nav {
 
 #flashcardsdiv {
 	display: flex;
-	justify-content: space-around;
+	justify-content: flex-start;
 	flex-wrap: wrap;
 }
 
