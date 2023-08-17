@@ -87,12 +87,18 @@ searchButton.addEventListener("click", function (event) {
 	let searchInput = search.value;
 	document.querySelector("#flashcardsdiv").innerHTML = "";
 	sets.forEach((set) => {
-		console.log(set.title);
+		// console.log(set.title);
 
 		if (set.title.includes(searchInput)) {
 			displaySet(set);
+			console.log("found set " + set.title);
 		}
 	});
+	if (document.querySelector("#flashcardsdiv").innerHTML == "") {
+		sets.forEach((set) => {
+			displaySet(set);
+		});
+	}
 });
 
 // read data from database
